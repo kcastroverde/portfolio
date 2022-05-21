@@ -2,7 +2,8 @@ import { NavLink } from "react-router-dom";
 import { FaBars, FaHome, FaLock, FaMoneyBill, FaUser } from "react-icons/fa";
 import { MdMessage } from "react-icons/md";
 
-import { BiCog } from "react-icons/bi";
+import { FaReact} from "react-icons/fa"
+import {FaProjectDiagram} from "react-icons/fa";
 import { AiFillHeart, AiTwotoneFileExclamation } from "react-icons/ai";
 import { BsCartCheck } from "react-icons/bs";
 import { useState, useEffect } from "react";
@@ -18,17 +19,17 @@ const routes = [
   {
     path: "/tecnologias",
     name: "tecnologias",
-    icon: <FaUser />,
+    icon: <FaReact />,
   },
   {
     path: "/trabajos",
     name: "trabajos",
-    icon: <MdMessage />,
+    icon: <FaProjectDiagram />,
   },
   {
     path: "/contactos",
     name: "contactos",
-    icon: <AiTwotoneFileExclamation />,
+    icon: <FaUser />,
   }
 ];
 
