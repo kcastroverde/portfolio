@@ -3,6 +3,7 @@ import contact from "../images/sections/contact.png";
 import {FaLinkedin, FaDiscord, FaInstagram , FaWhatsapp , FaTelegramPlane} from 'react-icons/fa'
 import {FiMail} from 'react-icons/fi'
 import { FaHome } from 'react-icons/fa'
+import { useNavigate } from "react-router-dom";
 const Contactos = () => {
   const list = [
     {
@@ -42,10 +43,16 @@ const Contactos = () => {
       link: 'mailto:castroverde.kevin@gmail.com'
     }
   ]
+
+  const navigate = useNavigate();
+
+  const goHome = () => {
+    navigate("/");
+  }
   return (
     <>
       <div className="first-container-menu">
-        <div className="movil-home"><FaHome/></div>
+        <div onClick={goHome} className="movil-home"><FaHome/></div>
         <div className="title">
           <div className="title-img-background"><img src={contact} alt={contact} /></div>
           <div className="description">

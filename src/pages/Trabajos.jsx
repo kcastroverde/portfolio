@@ -3,6 +3,8 @@ import ThumbMenu from "../components/thumb/ThumbMenu";
 import works from "../images/sections/worksShadow.png"
 import { useState } from "react";
 import { campaing, cryptolanding, game, interfaces, landing, portfolio } from "../components/images";
+import { useNavigate } from "react-router-dom";
+import { FaHome } from 'react-icons/fa'
 
 const Trabajos = () => {
   const list = [
@@ -59,11 +61,16 @@ const Trabajos = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [proyect, setProyect] = useState(list[0]);
 
+  const navigate = useNavigate();
 
+  const goHome = () => {
+    navigate("/");
+  }
   return (
     <>
     <ProyectModal isOpen={isOpen} setIsOpen={setIsOpen} proyect={proyect}/>
       <div className="first-container-menu">
+      <div onClick={goHome} className="movil-home"><FaHome/></div>
         <div className="title">
           <div className="title-img-background"><img src={works} alt={works} /></div>
           <div className="description">

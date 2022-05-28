@@ -6,6 +6,8 @@ import {FaNodeJs} from 'react-icons/fa'
 import {FaGithub} from 'react-icons/fa'
 import {FaRust} from 'react-icons/fa'
 import {SiSolidity} from 'react-icons/si'
+import { useNavigate } from "react-router-dom";
+import { FaHome } from 'react-icons/fa'
 
 const Tecnologias = () => {
   const list = [
@@ -34,9 +36,16 @@ const Tecnologias = () => {
       image: <FaVuejs/>,
     }
   ]
+
+  const navigate = useNavigate();
+
+  const goHome = () => {
+    navigate("/");
+  }
   return (
     <>
       <div className="first-container-menu">
+      <div onClick={goHome} className="movil-home"><FaHome/></div>
         <div className="title">
           <div className="title-img-background"><img src={tec} alt={tec} /></div>
           <div className="description">
