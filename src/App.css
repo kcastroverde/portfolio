@@ -277,7 +277,6 @@ main {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  cursor: pointer;
   position: relative;
   border: 1px solid rgba(255, 255, 255, 0.38);
 }
@@ -326,7 +325,7 @@ main {
   opacity: 0;
   transition: opacity  0.2s;
   font-weight: 600;
-  
+  cursor: pointer;
 }
 
 .hover-text div{
