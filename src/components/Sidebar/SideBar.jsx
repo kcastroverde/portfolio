@@ -1,14 +1,11 @@
 import { NavLink } from "react-router-dom";
-import { FaBars, FaHome, FaLock, FaMoneyBill, FaUser } from "react-icons/fa";
-import { MdMessage } from "react-icons/md";
-
-import { FaReact} from "react-icons/fa"
-import {FaProjectDiagram} from "react-icons/fa";
-import { AiFillHeart, AiTwotoneFileExclamation } from "react-icons/ai";
-import { BsCartCheck } from "react-icons/bs";
+import { FaBars, FaHome } from "react-icons/fa";
 import { useState, useEffect } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import SidebarMenu from "./SidebarMenu";
+import {MdOutlineContactMail} from 'react-icons/md'
+import {MdOutlineWeb} from 'react-icons/md'
+import {SiSemanticuireact} from 'react-icons/si'
 
 const routes = [
   {
@@ -19,39 +16,24 @@ const routes = [
   {
     path: "/tecnologias",
     name: "tecnologias",
-    icon: <FaReact />,
+    icon: <MdOutlineContactMail />,
   },
   {
     path: "/trabajos",
     name: "trabajos",
-    icon: <FaProjectDiagram />,
+    icon: <MdOutlineWeb />,
   },
   {
     path: "/contactos",
     name: "contactos",
-    icon: <FaUser />,
+    icon: <SiSemanticuireact />,
   }
 ];
 
 const SideBar = ({ children }) => {
   const [isOpen, setIsOpen] = useState(false);
   const toggle = () => setIsOpen(!isOpen);
-  const inputAnimation = {
-    hidden: {
-      width: 0,
-      padding: 0,
-      transition: {
-        duration: 0.2,
-      },
-    },
-    show: {
-      width: "140px",
-      padding: "5px 15px",
-      transition: {
-        duration: 0.2,
-      },
-    },
-  };
+
 
   const showAnimation = {
     hidden: {
@@ -73,7 +55,7 @@ const SideBar = ({ children }) => {
   
     const [windowSize, setWindowSize] = useState({width:1000,height: 10000,});
 
-    console.log(windowSize);
+   
 
     useEffect(() => {
       // Handler to call on window resize
@@ -103,8 +85,8 @@ const SideBar = ({ children }) => {
       <div className="main-container">
         <motion.div
           animate={{
-            width: isOpen ? "200px" : "45px",
-
+            width: isOpen ? "15vw" : "4vw",
+            minWidth: isOpen ? "160px" : "60px",
             transition: {
               duration: 0.5,
               type: "spring",
@@ -151,7 +133,7 @@ const SideBar = ({ children }) => {
                   to={route.path}
                   key={index}
                   className="link"
-                  activeClassName="active"
+                  activeclassname="active"
                 >
                   <div className="icon">{route.icon}</div>
                   <AnimatePresence>
@@ -173,7 +155,7 @@ const SideBar = ({ children }) => {
           </section>
         </motion.div>
 
-        <main>{children}</main>
+        <main >{children}</main>
       </div>
     </>
   );
