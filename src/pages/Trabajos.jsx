@@ -2,7 +2,7 @@ import ProyectModal from "../components/thumb/ProyectModal";
 import ThumbMenu from "../components/thumb/ThumbMenu";
 import works from "../images/sections/worksShadow.png"
 import { useState } from "react";
-import { campaing, cryptolanding, game, interfaces, landing, portfolio } from "../components/images";
+import { campaing, cryptolanding, game, interfaces, landing, portfolio, oppenCoffe } from "../components/images";
 import { useNavigate } from "react-router-dom";
 import { FaHome } from 'react-icons/fa'
 
@@ -20,9 +20,9 @@ const Trabajos = () => {
       title: "",
       image: "",
       background: "thumb-proyect-2",
-      hoverText: "Landing Page",
-      modalImage: landing,
-      link: 'https://flex-oder.mgpanel.org/'
+      hoverText: "Plataform Defi",
+      modalImage: oppenCoffe,
+      link: 'https://www.opencoffee.io/app/'
     },
     {
       title: "",

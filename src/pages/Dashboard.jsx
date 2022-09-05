@@ -26,7 +26,7 @@ const Dashboard = () => {
           <img src={me} alt='me' />
           <div>
             <h1>Kevin Castroverde</h1>
-            <h3>Front End Developer</h3>
+            <h3>FullStack Developer</h3>
           </div>
         </div>
         <div className="dashboard-menu">

@@ -1,6 +1,5 @@
 import ThumbMenu from "../components/thumb/ThumbMenu";
 import tec from "../images/sections/tecShadow.png"
-import {FaVuejs} from 'react-icons/fa'
 import {FaReact} from 'react-icons/fa'
 import {FaNodeJs} from 'react-icons/fa'
 import {FaGithub} from 'react-icons/fa'
@@ -8,6 +7,8 @@ import {FaRust} from 'react-icons/fa'
 import {SiSolidity} from 'react-icons/si'
 import { useNavigate } from "react-router-dom";
 import { FaHome } from 'react-icons/fa'
+import {SiExpress} from 'react-icons/si'
+import {DiMongodb} from 'react-icons/di'
 
 const Tecnologias = () => {
   const list = [
@@ -24,16 +25,16 @@ const Tecnologias = () => {
       image: <FaGithub/>,
     },
     {
-      title: "Rust",
-      image: <FaRust/>,
+      title: "Mongo DB",
+      image: <DiMongodb/>,
     },
     {
       title: "Solidity",
       image: <SiSolidity/>,
     },
     {
-      title: "Vue.js",
-      image: <FaVuejs/>,
+      title: "Express",
+      image: <SiExpress/>,
     }
   ]
 
