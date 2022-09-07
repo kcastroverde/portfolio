@@ -20,7 +20,7 @@ const Trabajos = () => {
       title: "",
       image: "",
       background: "thumb-proyect-2",
-      hoverText: "Plataform Defi",
+      hoverText: "Plataforma Defi",
       modalImage: oppenCoffe,
       link: 'https://www.opencoffee.io/app/'
     },
